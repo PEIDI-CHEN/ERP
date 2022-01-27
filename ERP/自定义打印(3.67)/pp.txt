@@ -1,0 +1,2 @@
+//±¨±í
+Function Integer Designer(string ConnStr,string SQLSyntax,string Parm,string FilterString) library 'RMReport.dll'

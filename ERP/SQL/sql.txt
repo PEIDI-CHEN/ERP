@@ -1,0 +1,25 @@
+select rate_class, sum(fee)
+from
+(
+    select case when rate < 0.25 then 'low rate'
+                when rate < 0.75 then 'medium rate'
+                else 'high rate'
+           end as rate_class,
+           Fee
+    from tablename
+) dt
+group by rate_class
+
+;with cte (Rateclass,rate,fee) as (
+
+   select Rateclass = (case when rate >=0.0 and rate < 0.25 then LowRate
+                            when rate >=0.25 and rate < 0.75 then ModerateRate
+                            when rate >=0.75 and rate < 1.0 then HighRate end),
+          rate,
+          fee
+   from table
+
+)
+select Rateclass, sum(fee)
+from cte
+group by Rateclass

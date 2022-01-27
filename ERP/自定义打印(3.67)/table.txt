@@ -1,0 +1,15 @@
+CREATE TABLE [t_report] (
+	[FType] [varchar] (30) COLLATE Chinese_PRC_CI_AS NOT NULL ,
+	[FName] [varchar] (60) COLLATE Chinese_PRC_CI_AS NOT NULL ,
+	[FReport] [image] NULL ,
+	[FDefault] [int] NULL CONSTRAINT [DF_t_report_FDefault] DEFAULT (0),
+	[FSQL] [varchar] (8000) COLLATE Chinese_PRC_CI_AS NULL ,
+	CONSTRAINT [PK_t_report] PRIMARY KEY  CLUSTERED 
+	(
+		[FType],
+		[FName]
+	)  ON [PRIMARY] 
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+

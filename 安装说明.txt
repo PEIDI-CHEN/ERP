@@ -1,0 +1,12 @@
+1、开发环境：VS2019 + SQL2008R2
+   登陆用户：001   没有密码
+
+2、安装DEVEXPRESS18.1.5套件
+
+3、需要安装officer中的 Access软件 
+
+4、将Set.INI文件放到C盘根目录下
+
+5、 连接字符串设置：JXC 项目下的 App.config 配置连接字符串
+<add key="Connection" value="server=localhost;database=tsJXC;User ID=sa;Password=sa" />
+
